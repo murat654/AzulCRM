@@ -23,11 +23,11 @@ Feature: Login feature
     And user clicks to the login button
     Then Marketing user logged in successfully
     Examples:
-      | username                        | password |
-      | marketing1@cybertekschool.com   | UserUser |
-      | marketing31@cybertekschool.com  | UserUser |
-      | marketing22@cybertekschool.com  | UserUser |
-      | marketing101@cybertekschool.com | UserUser |
+      | username                       | password |
+      | marketing90@cybertekschool.com | UserUser |
+      | marketing92@cybertekschool.com | UserUser |
+      | marketing95@cybertekschool.com | UserUser |
+      | marketing99@cybertekschool.com | UserUser |
 
   Scenario Outline: Login as Helpdesk user
     Given user enters username "<username>"
@@ -41,4 +41,69 @@ Feature: Login feature
       | helpdesk100@cybertekschool.com | UserUser |
       | helpdesk5@cybertekschool.com   | UserUser |
 
+  Scenario Outline: "Incorrect login or password." display verification for invalid credentials
+    Given user enters username "<username>"
+    And user enters password "<password>"
+    And user clicks to the login button
+    Then user sees Incorrect login or password message
+    Examples:
+      | username                       | password |
+      | helpdesk2@cybertekschool.com   | dasdadad |
+      | helpdesk99@cybertekschool.com  | 0799767j |
+      | dsfsdfsfsdf@cybertekschool.com | UserUser |
+      | helpdesk5@sdfsdffsdvsdvc.com   | UserUser |
 
+  Scenario Outline: "Please fill out this field" display verification when the password or username is empty
+    Given user enters username "<username>"
+    And user enters password "<password>"
+    And user clicks to the login button
+    Then user sees Please fill out this field message
+    Examples:
+      | username                     | password |
+      | helpdesk2@cybertekschool.com |          |
+      |                              | UserUser |
+      |                              | UserUser |
+      | helpdesk5@cybertekschool.com |          |
+
+  Scenario: user lands on the ‘Get Password’ page after clicking on the "Forgot your password?" link
+    Given user clicks Forgot your password? link
+    Then user lands on the Get Password page
+
+  Scenario: user sees "Remember Me" link exists and is clickable on the login page
+    Then user sees Remember Me link and is clickable
+
+  Scenario Outline: user sees the password in bullet signs by default
+    Given user enters username "<username>"
+    And user enters password "<password>"
+    Then user sees the password in bullet signs by default
+    Examples:
+      | username                       | password |
+      | helpdesk2@cybertekschool.com   | dasdadad |
+      | helpdesk99@cybertekschool.com  | 0799767j |
+      | dsfsdfsfsdf@cybertekschool.com | UserUser |
+      | helpdesk5@sdfsdffsdvsdvc.com   | UserUser |
+
+  Scenario Outline: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page
+    Given user enters username "<username>"
+    And user enters password "<password>" clicks to the Enter key
+    Then Helpdesk user logged in successfully
+    Examples:
+      | username                       | password |
+      | helpdesk2@cybertekschool.com   | UserUser |
+      | helpdesk99@cybertekschool.com  | UserUser |
+      | helpdesk100@cybertekschool.com | UserUser |
+      | helpdesk5@cybertekschool.com   | UserUser |
+
+  Scenario Outline: All users can see their own usernames in the profile menu, after successful login
+    Given user enters username "<username>"
+    And user enters password "<password>"
+    And user clicks to the login button
+    Then user sees "<username>" the username in the profile menu
+    Examples:
+      | username                       | password |
+      | helpdesk2@cybertekschool.com   | UserUser |
+      | helpdesk99@cybertekschool.com  | UserUser |
+      | marketing86@cybertekschool.com | UserUser |
+      | marketing85@cybertekschool.com | UserUser |
+      | hr100@cybertekschool.com       | UserUser |
+      | hr5@cybertekschool.com         | UserUser |

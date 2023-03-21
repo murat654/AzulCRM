@@ -19,9 +19,12 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"login-popup\"]/form/div[2]/input")
     public WebElement loginButton;
 
-    @FindBy(linkText = "Forgot your password?")
+    @FindBy(xpath = "//a[@class='login-link-forgot-pass']")
     public WebElement forgotYourPassLink;
 
     @FindBy(id = "USER_REMEMBER")
     public WebElement rememberMeOnThisComputerCheckBox;
+
+    @FindBy(xpath = "//*[@id=\"login-popup\"]/div[2]")
+    public WebElement errorMessageDisplay;
 }

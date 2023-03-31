@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9d4a1d2-9638-4881-83fd-f6b27bf56dd9" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/ForgotPasswordPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/step_definitions/Hooks.java" afterDir="false" />
+    <list default="true" id="d9d4a1d2-9638-4881-83fd-f6b27bf56dd9" name="Changes" comment="logout feature file is done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/setup.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/step_definitions/Logout_Stepdefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/utilities/BrowserUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/logout.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/azulcrm/step_definitions/Login_Stepdefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/step_definitions/Login_Stepdefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/azulcrm/runners/CukesRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/runners/CukesRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/azulcrm/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/azulcrm/utilities/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,16 +65,15 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CukesRunner">
-    <configuration name="Scenario: All users can see their own usernames in the profile menu, after successful login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: user can log out and ends up on the login page">
+    <configuration name="Feature: logout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/logout.feature" />
       <option name="GLUE" value="com.azulcrm.step_definitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AzulCRM" />
-      <option name="NAME_FILTER" value="^All users can see their own usernames in the profile menu\, after successful login$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^All users can see their own usernames in the profile menu\, after successful login$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: All users can see their own usernames in the profile menu, after successful login" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: logout" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -83,15 +85,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: user can log out and ends up on the login page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/logout.feature" />
       <option name="GLUE" value="com.azulcrm.step_definitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AzulCRM" />
-      <option name="NAME_FILTER" value="^Verify if the \‘Enter\’ key of the keyboard is working correctly on the login page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify if the \‘Enter\’ key of the keyboard is working correctly on the login page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page" />
+      <option name="NAME_FILTER" value="^user can log out and ends up on the login page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user can log out and ends up on the login page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: user can log out and ends up on the login page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -103,15 +105,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: user sees &quot;Remember Me&quot; link exists and is clickable on the login page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: user can not go to the home page again by clicking the step back button after successfully logging out" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/logout.feature" />
       <option name="GLUE" value="com.azulcrm.step_definitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AzulCRM" />
-      <option name="NAME_FILTER" value="^user sees \&quot;Remember Me\&quot; link exists and is clickable on the login page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user sees \&quot;Remember Me\&quot; link exists and is clickable on the login page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: user sees &quot;Remember Me&quot; link exists and is clickable on the login page" />
+      <option name="NAME_FILTER" value="^user can not go to the home page again by clicking the step back button after successfully logging out$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user can not go to the home page again by clicking the step back button after successfully logging out$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: user can not go to the home page again by clicking the step back button after successfully logging out" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -123,15 +125,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: user sees the password in bullet signs by default" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: user must be logged out if the user close the open tab (all tabs if there are multiple open tabs)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/logout.feature" />
       <option name="GLUE" value="com.azulcrm.step_definitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AzulCRM" />
-      <option name="NAME_FILTER" value="^user sees the password in bullet signs by default$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user sees the password in bullet signs by default$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: user sees the password in bullet signs by default" />
+      <option name="NAME_FILTER" value="^user must be logged out if the user close the open tab \(all tabs if there are multiple open tabs\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^user must be logged out if the user close the open tab \(all tabs if there are multiple open tabs\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: user must be logged out if the user close the open tab (all tabs if there are multiple open tabs)" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -160,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: user can log out and ends up on the login page" />
         <item itemvalue="JUnit.CukesRunner" />
-        <item itemvalue="Cucumber Java.Scenario: All users can see their own usernames in the profile menu, after successful login" />
-        <item itemvalue="Cucumber Java.Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page" />
-        <item itemvalue="Cucumber Java.Scenario: user sees the password in bullet signs by default" />
-        <item itemvalue="Cucumber Java.Scenario: user sees &quot;Remember Me&quot; link exists and is clickable on the login page" />
+        <item itemvalue="Cucumber Java.Scenario: user must be logged out if the user close the open tab (all tabs if there are multiple open tabs)" />
+        <item itemvalue="Cucumber Java.Feature: logout" />
+        <item itemvalue="Cucumber Java.Scenario: user can not go to the home page again by clicking the step back button after successfully logging out" />
       </list>
     </recent_temporary>
   </component>
@@ -191,11 +193,20 @@
       <option name="project" value="LOCAL" />
       <updated>1679166661541</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="login feature file is done">
+      <created>1679435799406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679435799406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="login feature file is done" />
+    <MESSAGE value="logout feature file is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="logout feature file is done" />
   </component>
 </project>

@@ -5,6 +5,7 @@ Feature: Login feature
   Background: User is expected to be on the login page for the scenarios on the feature file
     Given user is on the login page
 
+  @AZUL10-445
   Scenario Outline: Login as HR user
     Given user enters username "<username>"
     And user enters password "<password>"
@@ -17,6 +18,7 @@ Feature: Login feature
       | hr100@cybertekschool.com | UserUser |
       | hr5@cybertekschool.com   | UserUser |
 
+  @AZUL10-446
   Scenario Outline: Login as Marketing user
     Given user enters username "<username>"
     And user enters password "<password>"
@@ -29,6 +31,7 @@ Feature: Login feature
       | marketing95@cybertekschool.com | UserUser |
       | marketing99@cybertekschool.com | UserUser |
 
+  @AZUL10-447
   Scenario Outline: Login as Helpdesk user
     Given user enters username "<username>"
     And user enters password "<password>"
@@ -41,6 +44,7 @@ Feature: Login feature
       | helpdesk100@cybertekschool.com | UserUser |
       | helpdesk5@cybertekschool.com   | UserUser |
 
+  @AZUL10-448
   Scenario Outline: "Incorrect login or password." display verification for invalid credentials
     Given user enters username "<username>"
     And user enters password "<password>"
@@ -53,6 +57,7 @@ Feature: Login feature
       | dsfsdfsfsdf@cybertekschool.com | UserUser |
       | helpdesk5@sdfsdffsdvsdvc.com   | UserUser |
 
+  @AZUL10-449
   Scenario Outline: "Please fill out this field" display verification when the password or username is empty
     Given user enters username "<username>"
     And user enters password "<password>"
@@ -65,13 +70,16 @@ Feature: Login feature
       |                              | UserUser |
       | helpdesk5@cybertekschool.com |          |
 
+  @AZUL10-450
   Scenario: user lands on the ‘Get Password’ page after clicking on the "Forgot your password?" link
     Given user clicks Forgot your password? link
     Then user lands on the Get Password page
 
+  @AZUL10-451
   Scenario: user sees "Remember Me" link exists and is clickable on the login page
     Then user sees Remember Me link and is clickable
 
+  @AZUL10-452
   Scenario Outline: user sees the password in bullet signs by default
     Given user enters username "<username>"
     And user enters password "<password>"
@@ -83,6 +91,7 @@ Feature: Login feature
       | dsfsdfsfsdf@cybertekschool.com | UserUser |
       | helpdesk5@sdfsdffsdvsdvc.com   | UserUser |
 
+  @AZUL10-453
   Scenario Outline: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page
     Given user enters username "<username>"
     And user enters password "<password>" clicks to the Enter key
@@ -94,6 +103,7 @@ Feature: Login feature
       | helpdesk100@cybertekschool.com | UserUser |
       | helpdesk5@cybertekschool.com   | UserUser |
 
+  @AZUL10-454
   Scenario Outline: All users can see their own usernames in the profile menu, after successful login
     Given user enters username "<username>"
     And user enters password "<password>"

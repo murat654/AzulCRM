@@ -15,4 +15,7 @@ public class HomePage {
 
     @FindBy(xpath = "//span[@id='user-name']")
     public WebElement usernameSpan;
+
+    @FindBy(xpath = "//*[@id=\"popup-window-content-menu-popup-user-menu\"]/div/div/a[3]/span[2]")
+    public WebElement logoutSpan;
 }

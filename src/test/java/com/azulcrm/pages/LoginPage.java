@@ -10,10 +10,10 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(name = "USER_LOGIN")
+    @FindBy(xpath = "//input[@name='USER_LOGIN']")
     public WebElement usernameInput;
 
-    @FindBy(name = "USER_PASSWORD")
+    @FindBy(xpath = "//input[@name='USER_PASSWORD']")
     public WebElement passwordInput;
 
     @FindBy(xpath = "//*[@id=\"login-popup\"]/form/div[2]/input")
